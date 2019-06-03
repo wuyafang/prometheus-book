@@ -29,7 +29,7 @@ source_match_re:
 [ equal: '[' <labelname>, ... ']' ]
 ```
 
-当已经发送的告警通知匹配到target_match和target_match_re规则，当有新的告警规则如果满足source_match或者定义的匹配规则，并且以发送的告警与新产生的告警中equal定义的标签完全相同，则启动抑制机制，新的告警不会发送。
+当已经发送的告警通知匹配到source_match或source_match_re规则，当有新的告警规则如果满足target_match或者target_match_re定义的匹配规则，并且已发送的告警与新产生的告警中equal定义的标签完全相同，则启动抑制机制，新的告警不会发送。
 
 例如，定义如下抑制规则：
 
